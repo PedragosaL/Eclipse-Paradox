@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
             switchCharacters();
 
+        if (!_lumiere.gameObject.activeSelf || !_ombre.gameObject.activeSelf)
+            return;
+
         float distanceBetweenCharac = Vector2.Distance(_lumiere.position, _ombre.position);
         if(distanceBetweenCharac < 6)
         {
@@ -57,7 +61,15 @@ public class GameManager : MonoBehaviour
             _ombreBehaviour.enableCharacter(false);
             _lumiereBehaviour.enableCharacter(true);
         }
+    }
 
+    public void characterCrossTheDoor(Transform character)
+    {
 
+        if (character == _lumiere || character == _ombre)
+        {
+            switchCharacters();
+            character.gameObject.SetActive(false);
+        }
     }
 }
