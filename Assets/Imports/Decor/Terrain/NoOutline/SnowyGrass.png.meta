@@ -334,7 +334,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowyGrass_0: -487825531929401008
+      SnowyGrass_1: 5231445775110354305
+      SnowyGrass_2: -1673926270337681929
+      SnowyGrass_3: 9075530205502772112
+      SnowyGrass_4: -2013112183191252801
+      SnowyGrass_5: -4210534202859252864
+      SnowyGrass_6: 3213960566694177412
+      SnowyGrass_7: -6030273013008027316
+      SnowyGrass_8: 3921556402044532969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

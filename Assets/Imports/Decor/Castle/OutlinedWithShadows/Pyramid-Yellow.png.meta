@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pyramid-Yellow_0: 4839166752249135832
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

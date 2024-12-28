@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BasicTerrain_0: 3675495602524190934
+      BasicTerrain_1: 6854649543484155139
+      BasicTerrain_2: 6208496256122582305
+      BasicTerrain_3: 3957466762838861735
+      BasicTerrain_4: 7592048116576893832
+      BasicTerrain_5: -5493919248957331774
+      BasicTerrain_6: 3932619228216014065
+      BasicTerrain_7: -7014079339633725147
+      BasicTerrain_8: 6060351562616956381
+      BasicTerrain_9: -2449545797291720612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

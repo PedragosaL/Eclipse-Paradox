@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Evil-Purple_0: 1613941104503868503
+      Evil-Purple_1: -3292380074357432754
+      Evil-Purple_2: -1840542944835996325
+      Evil-Purple_3: -4954678304607168088
+      Evil-Purple_4: 9152465757559377953
+      Evil-Purple_5: -1975001684171250645
+      Evil-Purple_6: 4085314770796313684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

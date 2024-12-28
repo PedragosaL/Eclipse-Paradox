@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pyramid-Yellow_0: 4839166752249135832
+      Pyramid-Yellow_1: 4696747817766351792
+      Pyramid-Yellow_2: 2624850260199166901
+      Pyramid-Yellow_3: -8592641646619474961
+      Pyramid-Yellow_4: 840553358811831260
+      Pyramid-Yellow_5: -7343335543857423378
+      Pyramid-Yellow_6: 9218800095925907785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

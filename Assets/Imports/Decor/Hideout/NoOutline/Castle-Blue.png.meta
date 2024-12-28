@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Castle-Blue_0: -4292306998374372548
+      Castle-Blue_1: -3541627886815844555
+      Castle-Blue_2: 5822150304094508872
+      Castle-Blue_3: 2794780432808154231
+      Castle-Blue_4: -1872960021843305519
+      Castle-Blue_5: 6681670370045238733
+      Castle-Blue_6: 7106804481399981400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

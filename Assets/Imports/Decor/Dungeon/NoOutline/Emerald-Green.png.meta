@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Emerald-Green_0: -644160452751422903
+      Emerald-Green_1: -4311174015448626462
+      Emerald-Green_2: 8930968225879682819
+      Emerald-Green_3: 4274289032596599436
+      Emerald-Green_4: -4196002329104832909
+      Emerald-Green_5: 7033283144830115373
+      Emerald-Green_6: -148516468902031948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

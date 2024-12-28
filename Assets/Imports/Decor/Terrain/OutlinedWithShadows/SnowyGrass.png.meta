@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SnowyGrass_0: -487825531929401008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
