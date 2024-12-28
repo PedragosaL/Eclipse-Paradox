@@ -3,8 +3,8 @@ guid: a642f305ee8bad942a40573c3e535259
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1335006490120893386
-    second: Sprit_0
+      213: -7224217423611516676
+    second: ombre_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprit_0
+      name: ombre_0
       rect:
         serializedVersion: 2
         x: 5
         y: 0
         width: 19
-        height: 29
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac33f706455e68210800000000000000
-      internalID: 1335006490120893386
+      spriteID: cf8a27d578c6ebb90800000000000000
+      internalID: -7224217423611516676
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sprit_0: 1335006490120893386
+      ombre_0: -7224217423611516676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

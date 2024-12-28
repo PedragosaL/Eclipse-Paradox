@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 0792e542c1fcd2d4ebff4a9c1e613e58
+guid: ed335f6bb9a0fab4794da6431d82e140
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4035959289877228764
-    second: Walk_0
+      213: -5309154155774221935
+    second: Explo_0
   - first:
-      213: -982904232830982447
-    second: Walk_1
+      213: -324924838009844629
+    second: Explo_1
   - first:
-      213: -350908408369970039
-    second: Walk_2
+      213: -8074750970484945753
+    second: Explo_2
   - first:
-      213: -5409570386352685021
-    second: Walk_3
+      213: 8422220859888120837
+    second: Explo_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walk_0
+      name: Explo_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cdce119379b920830800000000000000
-      internalID: 4035959289877228764
+      spriteID: 191e947ac681256b0800000000000000
+      internalID: -5309154155774221935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_1
+      name: Explo_1
       rect:
         serializedVersion: 2
         x: 32
@@ -146,18 +146,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d6a1e1dec50c52f0800000000000000
-      internalID: -982904232830982447
+      spriteID: b6cc8b3d492ad7bf0800000000000000
+      internalID: -324924838009844629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_2
+      name: Explo_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 64
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -168,14 +168,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 984096a69a2512bf0800000000000000
-      internalID: -350908408369970039
+      spriteID: 7ac018236c8b0ff80800000000000000
+      internalID: -8074750970484945753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walk_3
+      name: Explo_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504348dcf3db1e470800000000000000
+      internalID: 8422220859888120837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explo_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbfd8c87320b7e45bcfce53be6588f8
+      internalID: 1136050419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explo_5
       rect:
         serializedVersion: 2
         x: 32
@@ -188,10 +232,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 320c9fd05685de4b0800000000000000
-      internalID: -5409570386352685021
+      spriteID: 13167482f2d4742408c5e2dbdbe41225
+      internalID: -1881870945
       vertices: []
       indices: 
       edges: []
@@ -200,7 +244,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 46ab2f27bafcd2048b7f76a79f1660a1
+    spriteID: b917a8e44b84d3a4b9637537be9e0072
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +254,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Walk_0: 4035959289877228764
-      Walk_1: -982904232830982447
-      Walk_2: -350908408369970039
-      Walk_3: -5409570386352685021
+      Explo_0: -5309154155774221935
+      Explo_1: -324924838009844629
+      Explo_2: -8074750970484945753
+      Explo_3: 8422220859888120837
+      Explo_4: 1136050419
+      Explo_5: -1881870945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

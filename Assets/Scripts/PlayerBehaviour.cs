@@ -11,11 +11,15 @@ public class PlayerBehaviour : MonoBehaviour
     public GameObject _currentPlayerMark;
 
     public UnityEvent<GameObject> _playerDied;
+    Animator _animator;
+
+    bool _canDie = true;
 
     void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
         _graphicsRotation = transform.GetComponentInChildren<GraphicsRotation>();
+        _animator = GetComponent<Animator>();
     }
 
     public void enableCharacter(bool enable) { 
@@ -26,7 +30,14 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     public void die() {
+        if (!_canDie)
+            return;
+
         _playerDied.Invoke(this.gameObject);
         Debug.Log(this.name + " Died !");
+
+        enableCharacter(false);
+        _animator.SetTrigger("Die");
+        _canDie = false;
     }
 }

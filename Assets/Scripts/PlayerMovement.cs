@@ -18,10 +18,12 @@ public class PlayerMovement : MonoBehaviour
     public Transform _groundCheckRight;
 
     Rigidbody2D _rb;
+    Animator _animator;
 
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
 
@@ -29,7 +31,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
             _canJump = true;
-        
+
+
+        _animator.SetFloat("Speed", MathF.Abs(_rb.linearVelocity.x));
+        _animator.SetBool("Jumping", !_isGrounded);
     }
 
     void FixedUpdate()
@@ -39,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
 
         _isGrounded = Physics2D.OverlapArea(_groundCheckLeft.position, _groundCheckRight.position);
         move();
-
     }
 
     private void move()
