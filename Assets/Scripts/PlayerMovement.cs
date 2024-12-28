@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void move()
     {
-        float horizontal = Input.GetAxis("Horizontal") * _speed * Time.fixedDeltaTime;
+        float horizontal = Input.GetAxisRaw("Horizontal") * _speed * Time.fixedDeltaTime;
         Vector2 newPos = new Vector2(horizontal, _rb.linearVelocity.y);
         _rb.linearVelocity = Vector3.SmoothDamp(_rb.linearVelocity, newPos, ref _velocity, 0.05f);
 
