@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 1432345107559543955}
   - component: {fileID: 1609367106532165792}
   - component: {fileID: 6649825807071114272}
-  - component: {fileID: 7073759372665034502}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -183,18 +182,6 @@ MonoBehaviour:
   _playerDied:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7073759372665034502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2741184717032052436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9a69a9c3c312d44950c3fa02c50183, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4015531026257836387
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3104725525705346192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groundCheckLeft
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -236,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8019131926583438651}
   - component: {fileID: 3550917268979515289}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CurrentCharacterCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2660417379015811646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5665191160205131223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groundCheckRight
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -386,7 +373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8040653001735613971}
   - component: {fileID: 4038864346446086666}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}

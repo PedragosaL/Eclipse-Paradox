@@ -4,10 +4,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public GameObject _lumiere;
+    public Transform _lumiere;
     PlayerBehaviour _lumiereBehaviour;
 
-    public GameObject _ombre;
+    public Transform _ombre;
     PlayerBehaviour _ombreBehaviour;
 
     void Awake()
@@ -35,6 +35,14 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
             switchCharacters();
+
+        float distanceBetweenCharac = Vector2.Distance(_lumiere.position, _ombre.position);
+        if(distanceBetweenCharac < 6)
+        {
+            _lumiereBehaviour.die();
+            _ombreBehaviour.die();
+        }
+
     }
 
     void switchCharacters()
