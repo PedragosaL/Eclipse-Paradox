@@ -152,6 +152,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 7732e86c5766d9041b460a8ad025b858, type: 2}
+    - target: {fileID: 8019131926583438651, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.084
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019131926583438651, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.944
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8372435777767404991, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
