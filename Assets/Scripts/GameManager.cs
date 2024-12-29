@@ -3,7 +3,7 @@ using UnityEngine.Rendering;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static GameManager _instance;
 
     public Transform _lumiere;
     PlayerBehaviour _lumiereBehaviour;
@@ -11,30 +11,33 @@ public class GameManager : MonoBehaviour
     public Transform _ombre;
     PlayerBehaviour _ombreBehaviour;
 
+    bool _canSwicth = true;
+
     void Awake()
     {
-        if(instance != null)
+        if(_instance != null)
         {
             Debug.Log("There is already an instance of GameManager");
             Destroy(this.gameObject);
             return;
         }
 
-        instance = this;
+        _instance = this;
     }
 
     void Start()
     {
         _lumiereBehaviour = _lumiere.GetComponent<PlayerBehaviour>();
-        _lumiereBehaviour.enableCharacter(true);
         _ombreBehaviour = _ombre.GetComponent<PlayerBehaviour>();
-        _ombreBehaviour.enableCharacter(false);
+
+        _lumiere.gameObject.SetActive(true);
+        _ombre.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("SwitchCharacter"))
             switchCharacters();
 
         if (!_lumiere.gameObject.activeSelf || !_ombre.gameObject.activeSelf)
@@ -51,14 +54,19 @@ public class GameManager : MonoBehaviour
 
     void switchCharacters()
     {
+        if (!_canSwicth)
+            return;
+
         if (_lumiereBehaviour._isCurrentPlayer)
         {
             _lumiereBehaviour.enableCharacter(false);
+            _lumiereBehaviour.stopInertia();
             _ombreBehaviour.enableCharacter(true);
         }
         else
         {
             _ombreBehaviour.enableCharacter(false);
+            _ombreBehaviour.stopInertia();
             _lumiereBehaviour.enableCharacter(true);
         }
     }
@@ -70,6 +78,10 @@ public class GameManager : MonoBehaviour
         {
             switchCharacters();
             character.gameObject.SetActive(false);
+            _canSwicth = false;
         }
     }
+
+    public void setCanSwitch(bool canSwitch) { _canSwicth = canSwitch; }
+  
 }

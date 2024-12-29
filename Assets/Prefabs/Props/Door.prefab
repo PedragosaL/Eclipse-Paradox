@@ -95,8 +95,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _openedDoorTop: {fileID: 21300000, guid: a67472f40b321af4a86583da2e6391d5, type: 3}
   _openedDoorBottom: {fileID: 21300000, guid: 1a316b9e91291c04daca2e8274f67768, type: 3}
+  _closedDoorTop: {fileID: 21300000, guid: 46557ad4fe8cbc8438bbb6f0c98b22cc, type: 3}
+  _closedDoorBottom: {fileID: 21300000, guid: 846bcead6b69b674b9ca809b161a1a64, type: 3}
   _doorTop: {fileID: 3127135467738453572}
   _doorBottom: {fileID: 8823583001923203082}
+  _characterReachedTheDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3127135467738453572
 GameObject:
   m_ObjectHideFlags: 0

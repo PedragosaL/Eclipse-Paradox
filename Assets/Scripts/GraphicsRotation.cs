@@ -18,4 +18,5 @@ public class GraphicsRotation : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") == 1)
             _sp.flipX = false;
     }
+
 }

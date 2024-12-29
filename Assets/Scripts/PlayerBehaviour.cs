@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -42,7 +43,7 @@ public class PlayerBehaviour : MonoBehaviour
         _playerDied.Invoke(this.gameObject);
         Debug.Log(this.name + " Died !");
 
-        _rb.linearVelocity = Vector2.zero;
+        stopInertia();
         _rb.gravityScale = 0;
         enableCharacter(false);
         _animator.SetTrigger("Die");
@@ -52,5 +53,19 @@ public class PlayerBehaviour : MonoBehaviour
     public void OnDeathAnimationEnd()
     {
         this.gameObject.SetActive(false);   
+    }
+
+    public void onLoad(bool afterLoad)
+    {
+        _canDie = afterLoad;
+        _rb.gravityScale = (afterLoad) ? 1 : 0;
+        enableCharacter(afterLoad);
+        transform.GetComponentInChildren<SpriteRenderer>().enabled = afterLoad;
+        GetComponent<PlayerMovement>().setCanMove(true);
+    }
+
+    public void stopInertia()
+    {
+        _rb.linearVelocity = Vector2.zero;
     }
 }

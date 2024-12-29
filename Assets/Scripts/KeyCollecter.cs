@@ -11,6 +11,8 @@ public class KeyCollecter : MonoBehaviour
     bool _canBePicked = true;
     bool _isDropped = false;
 
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!_canBePicked)
@@ -55,7 +57,7 @@ public class KeyCollecter : MonoBehaviour
 
         transform.position = newPos;
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetButtonDown("DropKey"))
             dropKey();
     }
 
@@ -67,5 +69,13 @@ public class KeyCollecter : MonoBehaviour
         _keyHolder.Invoke(null); 
         Debug.Log("Dropped");
         _isDropped = true;
+    }
+
+    public void resetKey()
+    {
+        _character = null;
+        _characterRigidbody = null;
+        _canBePicked = true;
+        _isDropped = false;
     }
 }
