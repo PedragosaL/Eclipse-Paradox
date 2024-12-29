@@ -57,4 +57,6 @@ public class PlayerMovement : MonoBehaviour
 
         _canJump = false;
     }
+
+    public void setCanMove(bool canMove) {  _canMove = canMove; }
 }

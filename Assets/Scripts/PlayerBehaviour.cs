@@ -22,6 +22,10 @@ public class PlayerBehaviour : MonoBehaviour
         _graphicsRotation = transform.GetComponentInChildren<GraphicsRotation>();
         _animator = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody2D>();
+
+        if (_playerDied == null)
+            _playerDied = new UnityEvent<GameObject>();
+        _playerDied.AddListener(obj => _playerMovement.setCanMove(false));
     }
 
     public void enableCharacter(bool enable) { 

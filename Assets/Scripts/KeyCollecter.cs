@@ -6,30 +6,42 @@ public class KeyCollecter : MonoBehaviour
     Transform _character = null;
     Rigidbody2D _characterRigidbody = null;
 
-    BoxCollider2D _collider;
-
-
     public UnityEvent<GameObject> _keyHolder;
 
-    private void Start()
-    {
-        _collider = GetComponent<BoxCollider2D>();
-    }
+    bool _canBePicked = true;
+    bool _isDropped = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!_canBePicked)
+            return;
+
         if(collision.tag == "Ombre" || collision.tag == "Lumiere")
         {
             _character = collision.transform;
             _characterRigidbody = collision.GetComponent<Rigidbody2D>();
-            _collider.enabled = false;
             _keyHolder.Invoke(_character.gameObject);
+            _canBePicked = false;
+            _isDropped = false;
         }
     }
 
     private void Update()
     {
         if(_character == null) return;
+
+        if (_isDropped)
+        {
+            float distance = Vector3.Distance(transform.position, _character.transform.position);
+            if(distance >= 1)
+            {
+                _canBePicked = true;
+                _character = null;
+            }
+
+            return;
+        }
+
 
         Vector3 newPos = transform.position;
 
@@ -47,12 +59,13 @@ public class KeyCollecter : MonoBehaviour
             dropKey();
     }
 
+   
 
     void dropKey()
     {
-        _collider.enabled = true;
-        _character = null;
-        _keyHolder.Invoke(null);
+        transform.position = new Vector2(_character.position.x, transform.position.y);
+        _keyHolder.Invoke(null); 
         Debug.Log("Dropped");
+        _isDropped = true;
     }
 }
