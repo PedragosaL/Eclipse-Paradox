@@ -54,19 +54,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1322618039913071088, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Size.x
-      value: 0.71768916
+      value: 0.9190501
       objectReference: {fileID: 0}
     - target: {fileID: 1322618039913071088, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Size.y
-      value: 1.0209816
+      value: 1.2803882
       objectReference: {fileID: 0}
     - target: {fileID: 1322618039913071088, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Offset.x
-      value: -0.05371046
+      value: -0.077274024
       objectReference: {fileID: 0}
     - target: {fileID: 1322618039913071088, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Offset.y
-      value: -0.020902038
+      value: -0.049716532
       objectReference: {fileID: 0}
     - target: {fileID: 1432345107559543955, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Radius
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1432345107559543955, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Offset.y
-      value: -0.4
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 2089978099233962351, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Sprite
@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3104725525705346192, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.642
+      value: -0.822
       objectReference: {fileID: 0}
     - target: {fileID: 4038864346446086666, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Color.b
@@ -146,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5665191160205131223, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.642
+      value: -0.822
       objectReference: {fileID: 0}
     - target: {fileID: 6339916878218838022, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Controller

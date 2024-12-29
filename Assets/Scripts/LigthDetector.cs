@@ -11,8 +11,16 @@ public class LigthDetector : MonoBehaviour
     };
 
     public LightType _lightType;
-    public UnityEvent _killLumiere;
-    public UnityEvent _killOmbre;
+
+    PlayerBehaviour _ombreBehaviour;
+    PlayerBehaviour _lumiereBehaviour;
+
+    private void Start()
+    {
+        _ombreBehaviour = GameObject.FindWithTag("Ombre").GetComponent<PlayerBehaviour>();
+        _lumiereBehaviour = GameObject.FindWithTag("Lumiere").GetComponent<PlayerBehaviour>();
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,12 +28,12 @@ public class LigthDetector : MonoBehaviour
         {
             case LightType.Light:
                 if (collision.tag == "Ombre")
-                    _killOmbre.Invoke();
+                    _ombreBehaviour.die();
                 break;
 
             case LightType.Shadow:
                 if (collision.tag == "Lumiere")
-                    _killLumiere.Invoke();
+                    _lumiereBehaviour.die();
                 break;
             default:
                 break;

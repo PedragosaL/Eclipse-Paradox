@@ -12,6 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public UnityEvent<GameObject> _playerDied;
     Animator _animator;
+    Rigidbody2D _rb;
 
     bool _canDie = true;
 
@@ -20,6 +21,7 @@ public class PlayerBehaviour : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _graphicsRotation = transform.GetComponentInChildren<GraphicsRotation>();
         _animator = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     public void enableCharacter(bool enable) { 
@@ -36,8 +38,15 @@ public class PlayerBehaviour : MonoBehaviour
         _playerDied.Invoke(this.gameObject);
         Debug.Log(this.name + " Died !");
 
+        _rb.linearVelocity = Vector2.zero;
+        _rb.gravityScale = 0;
         enableCharacter(false);
         _animator.SetTrigger("Die");
         _canDie = false;
+    }
+
+    public void OnDeathAnimationEnd()
+    {
+        this.gameObject.SetActive(false);   
     }
 }
