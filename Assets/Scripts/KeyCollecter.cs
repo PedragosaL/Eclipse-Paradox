@@ -101,5 +101,10 @@ public class KeyCollecter : MonoBehaviour
         _characterRigidbody = null;
         _canBePicked = true;
         _isDropped = false;
+
+        _ombreHasKey = false;
+        _lumiereHasKey = false;
     }
+
+    
 }
