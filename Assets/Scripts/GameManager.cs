@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.TextCore.Text;
 
 public class GameManager : MonoBehaviour
 {
@@ -99,5 +100,13 @@ public class GameManager : MonoBehaviour
 
     public void setCanSwitch(bool canSwitch) { _canSwicth = canSwitch; }
   
+    public Transform getCurrentCharacter()
+    {
+        if (_lumiereBehaviour._isCurrentPlayer)
+            return _lumiere;
+        else if (_ombreBehaviour._isCurrentPlayer)
+            return _ombre;
 
+        return null;
+    }
 }

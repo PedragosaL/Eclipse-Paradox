@@ -12,19 +12,33 @@ public class KeyCollecter : MonoBehaviour
     bool _isDropped = false;
 
 
+    static bool _ombreHasKey = false;
+    static bool _lumiereHasKey = false;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!_canBePicked)
             return;
 
-        if(collision.tag == "Ombre" || collision.tag == "Lumiere")
+        if(collision.tag == "Ombre" && !_ombreHasKey)
         {
             _character = collision.transform;
             _characterRigidbody = collision.GetComponent<Rigidbody2D>();
             _keyHolder.Invoke(_character.gameObject);
             _canBePicked = false;
             _isDropped = false;
+            _ombreHasKey = true;
+        }
+
+        else if(collision.tag == "Lumiere" && !_lumiereHasKey)
+        {
+            _character = collision.transform;
+            _characterRigidbody = collision.GetComponent<Rigidbody2D>();
+            _keyHolder.Invoke(_character.gameObject);
+            _canBePicked = false;
+            _isDropped = false;
+            _lumiereHasKey = true;
         }
     }
 
@@ -65,10 +79,20 @@ public class KeyCollecter : MonoBehaviour
 
     void dropKey()
     {
+        if (GameManager._instance.getCurrentCharacter() != _character)
+            return;
+    
+
         transform.position = new Vector2(_character.position.x, transform.position.y);
         _keyHolder.Invoke(null); 
         Debug.Log("Dropped");
         _isDropped = true;
+
+
+        if (_character.tag == "Ombre")
+            _ombreHasKey = false;
+        else if (_character.tag == "Lumiere")
+            _lumiereHasKey = false;
     }
 
     public void resetKey()
