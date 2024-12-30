@@ -19,6 +19,7 @@ public class TextManager : MonoBehaviour
             return;
         }
 
+        LevelManager._instance._canShowText = false;
         GameManager._instance._timeFroze = true;
     }
 

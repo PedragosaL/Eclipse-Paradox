@@ -12,6 +12,9 @@ public class GraphicsRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager._instance._timeFroze)
+            return;
+
         if (Input.GetAxisRaw("Horizontal") == -1)
             _sp.flipX = true;
 

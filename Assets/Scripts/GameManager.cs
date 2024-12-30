@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
 
     public bool _timeFroze = false;
 
+    public void setTimeFroze(bool timeFroze) { _timeFroze = timeFroze; }
+
+    public GameObject _pauseUI;
+
     void Awake()
     {
         if(_instance != null)
@@ -41,6 +45,12 @@ public class GameManager : MonoBehaviour
     {
         if (_timeFroze)
             return;
+
+        if (Input.GetButtonDown("Pause"))
+        {
+            _pauseUI.SetActive(true);
+            _timeFroze = true;
+        }
 
         if (Input.GetButtonDown("SwitchCharacter"))
             switchCharacters();
