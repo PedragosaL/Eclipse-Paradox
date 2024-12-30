@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1432345107559543955, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Offset.y
-      value: -0.57
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2089978099233962351, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Sprite
@@ -102,6 +102,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2741184717032052436, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
       propertyPath: m_Name
+      value: Ombre
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741184717032052436, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}
+      propertyPath: m_TagString
       value: Ombre
       objectReference: {fileID: 0}
     - target: {fileID: 3104725525705346192, guid: decc4eda0c4dd174a9d270502d8f5f72, type: 3}

@@ -11,6 +11,7 @@ public class PlayerSpawner : MonoBehaviour
     };
 
     public Object _object;
+    public bool _flipX = false;
 
     private void Start()
     {
@@ -20,11 +21,14 @@ public class PlayerSpawner : MonoBehaviour
                 {
                     GameObject character = GameObject.FindWithTag("Lumiere");
                     character.SetActive(true);
-                    character.transform.position = transform.position;
+                    character.transform.position = new Vector3(transform.position.x, transform.position.y - 1.7f, 0);
 
                     var pb = character.GetComponent<PlayerBehaviour>();
                     pb.onLoad(true);
                     pb.enableCharacter(true);
+
+                    if (_flipX)
+                        character.transform.GetComponentInChildren<SpriteRenderer>().flipX = true;
 
                     GameManager._instance.setCanSwitch(true);
                     break;
@@ -33,23 +37,26 @@ public class PlayerSpawner : MonoBehaviour
                 {
                     GameObject character = GameObject.FindWithTag("Ombre");
                     character.SetActive(true);
-                    character.transform.position = transform.position;
+                    character.transform.position = new Vector3(transform.position.x, transform.position.y - 1.7f, 0);
 
                     var pb = character.GetComponent<PlayerBehaviour>();
                     pb.onLoad(true);
                     pb.enableCharacter(false);
 
+                    if (_flipX)
+                        character.transform.GetComponentInChildren<SpriteRenderer>().flipX = true;
+
                     GameManager._instance.setCanSwitch(true);
                     break;
                 }
             case Object.Door:
-                DoorOpener._instance.transform.position = transform.position;
+                DoorOpener._instance.transform.position = new Vector3(transform.position.x, transform.position.y - 1.8f, 0);
                 DoorOpener._instance.resetDoor();
                 break;
             case Object.Key:
                 {
                     GameObject key = GameObject.FindWithTag("DoorKey");
-                    key.transform.position = transform.position;
+                    key.transform.position = new Vector3(transform.position.x, transform.position.y - 1.8f, 0);
                     key.GetComponent<SpriteRenderer>().enabled = true;
                     key.GetComponent<KeyCollecter>().resetKey();
                 }

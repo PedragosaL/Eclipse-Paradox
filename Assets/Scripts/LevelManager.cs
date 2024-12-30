@@ -31,8 +31,12 @@ public class LevelManager : MonoBehaviour
     {
         switch (_currentLevel)
         {
-            case 0: return "First scene";
-            case 1: return "test";
+            case 0: return "Main menu";
+            case 1: return "Level 1";
+            case 2: return "Level 2";
+            case 3: return "Level 3";
+            case 4: return "Level 4";
+
         }
         return "Main menu";
     }
@@ -44,9 +48,10 @@ public class LevelManager : MonoBehaviour
         loadScene(getLevel());
     }
 
-    public void loadInitScene()
+    public void startGame()
     {
-        loadScene("First scene");
+        SceneManager.LoadScene(getLevel());
+        _loadScene.Invoke();
     }
 
     public void reloadLevel()
@@ -56,7 +61,8 @@ public class LevelManager : MonoBehaviour
 
     public void loadMainMenu()
     {
-        loadScene("Main menu");
+        SceneManager.LoadScene("Main menu");
+        _loadScene.Invoke();
     }
 
     void loadScene(string sceneName)
