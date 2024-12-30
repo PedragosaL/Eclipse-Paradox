@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             return;
 
         float distanceBetweenCharac = Vector2.Distance(_lumiere.position, _ombre.position);
-        if(distanceBetweenCharac < 6)
+        if(distanceBetweenCharac < 5)
         {
             _lumiereBehaviour.die();
             _ombreBehaviour.die();
