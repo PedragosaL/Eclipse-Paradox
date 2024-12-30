@@ -16,12 +16,18 @@ public class MenuManager : MonoBehaviour
         GameObject.FindWithTag("Lumiere").SetActive(false);
         GameObject.FindWithTag("Ombre").SetActive(false);
 
+        Cursor.visible = true;
     }
 
     public void startGame()
     {
         if(_canLoad) 
             LevelManager._instance.startGame();
+    }
+
+    public void quit()
+    {
+        Application.Quit();
     }
 
 }
