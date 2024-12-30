@@ -18,8 +18,9 @@ public class TextManager : MonoBehaviour
             _button.SetActive(false);
             return;
         }
-
+        
         LevelManager._instance._canShowText = false;
+        Cursor.visible = true;
         GameManager._instance._timeFroze = true;
     }
 
