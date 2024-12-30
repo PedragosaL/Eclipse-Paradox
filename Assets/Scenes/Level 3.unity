@@ -498,8 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7401487007969338102, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
       propertyPath: m_Text
-      value: There are certain areas of light and shadow. Lumiere can walk in light
-        but will die in darkness. Conversely, Ombre will perish in the light.
+      value: Be careful, there are spikes. It seems obvious, but don't jump on them.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
