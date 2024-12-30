@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     bool _canSwicth = true;
 
+    public bool _timeFroze = false;
+
     void Awake()
     {
         if(_instance != null)
@@ -37,6 +39,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_timeFroze)
+            return;
+
         if (Input.GetButtonDown("SwitchCharacter"))
             switchCharacters();
 
@@ -44,7 +49,7 @@ public class GameManager : MonoBehaviour
             return;
 
         float distanceBetweenCharac = Vector2.Distance(_lumiere.position, _ombre.position);
-        if(distanceBetweenCharac < 6)
+        if(distanceBetweenCharac < 4)
         {
             _lumiereBehaviour.die();
             _ombreBehaviour.die();
@@ -84,4 +89,5 @@ public class GameManager : MonoBehaviour
 
     public void setCanSwitch(bool canSwitch) { _canSwicth = canSwitch; }
   
+
 }

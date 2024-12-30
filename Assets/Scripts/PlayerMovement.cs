@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
    void Update()
     {
+        if (GameManager._instance._timeFroze)
+            return;
+
         if (Input.GetButtonDown("Jump"))
             _canJump = true;
 
@@ -39,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_canMove)
+        if (!_canMove || GameManager._instance._timeFroze)
             return;
 
         _isGrounded = Physics2D.OverlapArea(_groundCheckLeft.position, _groundCheckRight.position);

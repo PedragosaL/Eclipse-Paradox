@@ -21,7 +21,7 @@ public class PlayerSpawner : MonoBehaviour
                 {
                     GameObject character = GameObject.FindWithTag("Lumiere");
                     character.SetActive(true);
-                    character.transform.position = new Vector3(transform.position.x, transform.position.y - 1.7f, 0);
+                    character.transform.position = new Vector3(transform.position.x + 1, transform.position.y - 1.7f, 0);
 
                     var pb = character.GetComponent<PlayerBehaviour>();
                     pb.onLoad(true);
@@ -37,7 +37,7 @@ public class PlayerSpawner : MonoBehaviour
                 {
                     GameObject character = GameObject.FindWithTag("Ombre");
                     character.SetActive(true);
-                    character.transform.position = new Vector3(transform.position.x, transform.position.y - 1.7f, 0);
+                    character.transform.position = new Vector3(transform.position.x + 1, transform.position.y - 1.7f, 0);
 
                     var pb = character.GetComponent<PlayerBehaviour>();
                     pb.onLoad(true);
@@ -50,13 +50,13 @@ public class PlayerSpawner : MonoBehaviour
                     break;
                 }
             case Object.Door:
-                DoorOpener._instance.transform.position = new Vector3(transform.position.x, transform.position.y - 1.8f, 0);
+                DoorOpener._instance.transform.position = new Vector3(transform.position.x + 1, transform.position.y - 1.8f, 0);
                 DoorOpener._instance.resetDoor();
                 break;
             case Object.Key:
                 {
                     GameObject key = GameObject.FindWithTag("DoorKey");
-                    key.transform.position = new Vector3(transform.position.x, transform.position.y - 1.8f, 0);
+                    key.transform.position = new Vector3(transform.position.x+1, transform.position.y - 1.8f, 0);
                     key.GetComponent<SpriteRenderer>().enabled = true;
                     key.GetComponent<KeyCollecter>().resetKey();
                 }

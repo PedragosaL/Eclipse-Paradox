@@ -6,9 +6,13 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager _instance;
-    public UnityEvent _loadScene;
 
-    int _currentLevel = 1;
+    public bool _canShowText = true;
+
+    [SerializeField]
+    int _currentLevel;
+
+    public UnityEvent _loadScene;
 
     private void Awake()
     {
@@ -45,22 +49,26 @@ public class LevelManager : MonoBehaviour
     public void loadNextLevel()
     {
         _currentLevel++;
+        _canShowText = true;
         loadScene(getLevel());
     }
 
     public void startGame()
     {
+        _canShowText = true;
         SceneManager.LoadScene(getLevel());
         _loadScene.Invoke();
     }
 
     public void reloadLevel()
     {
+        _canShowText = false;
         loadScene(getLevel());
     }
 
     public void loadMainMenu()
     {
+        _canShowText = true;
         SceneManager.LoadScene("Main menu");
         _loadScene.Invoke();
     }
