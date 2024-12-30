@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 717779611148462736}
   - component: {fileID: 8967581985117355198}
   - component: {fileID: 2654256038352793837}
+  - component: {fileID: 2383165927668394449}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -151,33 +152,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lightType: 1
-  _killLumiere:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6830824093921657864, guid: 4758aa4002cd8bd49be0f74614f4f3fc, type: 3}
-        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
-        m_MethodName: die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _killOmbre:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4217920119791753908, guid: 674ff89597d41cb46a88a384158f654c, type: 3}
-        m_TargetAssemblyTypeName: PlayerBehaviour, Assembly-CSharp
-        m_MethodName: die
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &2383165927668394449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2813514469832166514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76a0969c1929e94298d3c6e778a3fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
