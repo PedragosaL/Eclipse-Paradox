@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
             case 2: return "Level 2";
             case 3: return "Level 3";
             case 4: return "Level 4";
-            case 5: return "Main menu";
+            case 5: return "Credits scene";
 
         }
         return "Main menu";
