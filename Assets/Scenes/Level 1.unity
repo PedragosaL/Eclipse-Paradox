@@ -8662,6 +8662,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1501240924 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 697901131489183229, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+  m_PrefabInstance: {fileID: 5718363395775903108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c68e1701ed7141c41a7c35abe7392127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1583026055
 GameObject:
   m_ObjectHideFlags: 0
@@ -9018,6 +9029,7 @@ MonoBehaviour:
   _lumiere: {fileID: 1118824508}
   _ombre: {fileID: 1155448593}
   _timeFroze: 0
+  _pauseUI: {fileID: 0}
 --- !u!1001 &5718363395775903108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9029,6 +9041,34 @@ PrefabInstance:
     - target: {fileID: 1600321741687931235, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
       propertyPath: m_Name
       value: TextManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717789180456799320, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717789180456799320, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717789180456799320, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1501240924}
+    - target: {fileID: 2717789180456799320, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717789180456799320, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: setCursorVisibilty
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717789180456799320, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TextManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717789180456799320, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4162508185864883213, guid: ea242f469c34f0042afec2fb100a2951, type: 3}
       propertyPath: m_Pivot.x

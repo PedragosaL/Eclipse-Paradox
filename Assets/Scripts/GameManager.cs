@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
         {
             _pauseUI.SetActive(true);
             _timeFroze = true;
+            setCursorVisibility(true);
         }
 
         if (Input.GetButtonDown("SwitchCharacter"))
@@ -109,4 +110,6 @@ public class GameManager : MonoBehaviour
 
         return null;
     }
+
+    public void setCursorVisibility(bool isVisible) { Cursor.visible = isVisible; }
 }

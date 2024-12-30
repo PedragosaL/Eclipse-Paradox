@@ -30,4 +30,9 @@ public class TextManager : MonoBehaviour
         _button.SetActive(false);
         GameManager._instance._timeFroze = false;
     }
+
+    public void setCursorVisibilty(bool isVisible)
+    {
+        Cursor.visible = isVisible;
+    }
 }
