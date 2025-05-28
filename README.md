@@ -1,9 +1,3 @@
-<p align="right">
-  🇺🇸 [EN](#en---english) | 🇫🇷 [FR](#fr---français)
-</p>
-
----
-
 # 🇺🇸 EN – English
 
 ## 🌑 Eclipse Paradox
